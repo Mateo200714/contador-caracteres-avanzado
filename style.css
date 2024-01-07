@@ -1,0 +1,259 @@
+/* fuentes de texto */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+body {
+    margin: 0;
+    background-color: #07273b;
+}
+
+.div-contenedor-textarea {
+    position: relative;
+    display: flex;
+    margin-top: 0px;
+    overflow-y: auto;
+}
+
+.lineas-numeros {
+    position: relative;
+    width: 50px;
+    padding: 12px;
+    border-right: none;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    user-select: none;
+    white-space: pre;
+    text-align: center;
+    color: rgb(130, 142, 149);
+    font-weight: 600;
+    letter-spacing: 0.55px;
+    line-height: 1.4;
+}
+
+.textarea-editor {
+    margin: 0;
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    padding: 12px 16px 12px 0;
+    border: none;
+    font-family: Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    color: #2e94ae;
+    letter-spacing: 0.45px;
+    line-height: 1.4;
+}
+
+.line-focus {
+    color: #158bae;
+}
+
+.div-subcontenedor-textarea {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: calc(100% - 25px);
+    padding-right: 25px;
+    height: 20px;
+    border-top: 1px solid black;
+    font: 13.4px Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    color: #2182cd;
+    text-align: right;
+    cursor: default;
+    background-color: #07273b;
+}
+
+.div-subcontenedor-textarea span {
+    margin-left: 9px;
+    letter-spacing: 0.4px;
+}
+
+.div-herramientas {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 180px;
+    height: calc(100% - 21px);
+    border-inline-start: 1px solid black;
+    border-block-end: 1px solid black;
+    z-index: 100;
+    background-color: #07273b;
+    overflow: auto;
+}
+
+.bt-herramienta-principal {
+    left: 1px;
+    transition: 0.45s;
+    margin: 0;
+    position: relative;
+    width: calc(100% - 2px);
+    height: 40px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.151);
+    scale: 0.98;
+    font: 18px 'DM Sans', sans-serif;
+    color: #c6d1d0;
+    letter-spacing: 0.55px;
+    font-weight: 600;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    background: #006e7d1a;
+    animation: cambio_background 8s alternate-reverse infinite;
+}
+
+.bt-herramienta-principal:hover {
+    transition: 0.35s;
+    color: #f9f9f9;
+    background-color: #006f7d;
+    animation: none;
+}
+
+.div-herramientas .lista {
+    position: relative;
+    left: 2px;
+    width: calc(100% - 4px);
+    margin-top: 1px;
+}
+
+.div-herramientas .lista .titulo-lista {
+    background-color: #092333;
+    position: relative;
+    width: 100%;
+    min-height: 30px;
+    padding: 3.5px 0;
+    font: 15.4px Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    color: #2182cd;
+    font-weight: 600;
+    letter-spacing: 0.45px;
+    user-select: none;
+    display: flex;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.186);
+}
+
+.div-herramientas .lista .titulo-lista .text {
+    width: calc(100% - 64px);
+    padding-left: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.div-herramientas .lista .titulo-lista .img {
+    width: 30px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.div-herramientas .lista .titulo-lista .img img {
+    width: 100%;
+}
+
+.div-herramientas .lista .titulo-lista .img .abierto {
+    transition: 0.35s;
+    rotate: -180deg;
+}
+
+.div-herramientas .lista .titulo-lista .img .cerrado {
+    transition: 0.35s;
+    rotate: 0deg;
+}
+
+.div-herramientas .lista .contenido-lista {
+    position: relative;
+    width: calc(100% - 24px);
+    display: grid;
+    padding: 4px 12px;
+    background-color: #0e293a;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.div-herramientas .lista .contenido-lista span {
+    margin-bottom: 5px;
+    font: 15.2px 'DM Sans', sans-serif;
+    color: #2182cd;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+.div-herramientas .lista .contenido-lista span font {
+    font: 15.5px 'DM Sans', sans-serif;
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior {
+    position: relative;
+    width: 100%;
+    margin-top: 1px;
+    box-shadow: 0 1px 4.5px rgba(0, 0, 0, 0.165);
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior .titulo-lista-interior {
+    background-color: #092333;
+    position: relative;
+    width: 100%;
+    min-height: 30px;
+    padding: 3.5px 0;
+    font-size: 13.6px !important;
+    color: #2182cd;
+    font-weight: 600;
+    letter-spacing: 0.45px;
+    user-select: none;
+    display: flex;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.186);
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior .titulo-lista-interior .text {
+    width: calc(100% - 64px);
+    padding-left: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior .titulo-lista-interior .img {
+    width: 30px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior .titulo-lista-interior .img img {
+    width: 100%;
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior .titulo-lista-interior .img .abierto {
+    transition: 0.35s;
+    rotate: -180deg;
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior .titulo-lista-interior .img .cerrado {
+    transition: 0.35s;
+    rotate: 0deg;
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior .contenido-lista-interior {
+    position: relative;
+    width: calc(100% - 24px);
+    display: grid;
+    padding: 4px 12px;
+    background-color: #102d3f;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior .contenido-lista-interior span {
+    margin-bottom: 5px;
+    font: 15.2px 'DM Sans', sans-serif;
+    color: #2182cd;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+.div-herramientas .lista .contenido-lista .lista-interior .contenido-lista-interior span font {
+    font: 15.5px 'DM Sans', sans-serif;
+}

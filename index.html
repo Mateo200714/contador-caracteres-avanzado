@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de caracteres avanzado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="div-contenedor-textarea">
+        <div class="lineas-numeros"></div>
+        <textarea id="textarea" class="textarea-editor"></textarea>
+    </div>
+    <div class="div-subcontenedor-textarea">
+        <span>Parágrafos: <font id="editor-counter-paragraph">0</font></span>
+        <span>Líneas: <font id="editor-counter-line">0</font></span>
+        <span>Caracteres: <font id="editor-counter-character">0</font></span>
+        <span>Palabras: <font id="editor-counter-word">0</font></span>
+    </div>
+    <div class="div-herramientas">
+        <h3 class="bt-herramienta-principal" id="actualizar-herramientas">Actualizar</h3>
+        <div class="lista">
+            <div class="titulo-lista">
+                <div class="text">
+                    <span>Caracteres</span>
+                </div>
+                <div class="img">
+                    <img class="cerrado" loading="lazy" src="/recursos/flecha_pico.svg"
+                        alt="Mostrar esconder contenido lista">
+                </div>
+            </div>
+            <div class="contenido-lista">
+                <span>Caracteres <font id="text-counter-character">( 0 )</font></span>
+                <span>Palabras <font id="text-counter-word">( 0 )</font></span>
+                <span>Letras <font id="text-counter-letter">( 0 )</font></span>
+                <span>Números <font id="text-counter-number">( 0 )</font></span>
+                <span>Símbolos <font id="text-counter-symbol">( 0 )</font></span>
+                <span>Espacios <font id="text-counter-space">( 0 )</font></span>
+            </div>
+        </div>
+        <div class="lista">
+            <div class="titulo-lista">
+                <div class="text">
+                    <span>Caracteres Avanzado</span>
+                </div>
+                <div class="img">
+                    <img class="cerrado" loading="lazy" src="/recursos/flecha_pico.svg"
+                        alt="Mostrar esconder contenido lista">
+                </div>
+            </div>
+            <div class="contenido-lista">
+                <div class="lista-interior">
+                    <div class="titulo-lista-interior">
+                        <div class="text">
+                            <span>Caracteres más repetidos ( 10 )</span>
+                        </div>
+                        <div class="img">
+                            <img class="cerrado" loading="lazy" src="/recursos/flecha_pico.svg"
+                                alt="Mostrar esconder contenido lista">
+                        </div>
+                    </div>
+                    <div class="contenido-lista-interior" id="text-counter-most-repeat-letter">
+                    </div>
+                </div>
+                <div class="lista-interior">
+                    <div class="titulo-lista-interior">
+                        <div class="text">
+                            <span>Caracteres más repetidos ( 10 )</span>
+                        </div>
+                        <div class="img">
+                            <img class="cerrado" loading="lazy" src="/recursos/flecha_pico.svg"
+                                alt="Mostrar esconder contenido lista">
+                        </div>
+                    </div>
+                    <div class="contenido-lista-interior" id="text-counter-most-repeat-number">
+                    </div>
+                </div>
+                <div class="lista-interior">
+                    <div class="titulo-lista-interior">
+                        <div class="text">
+                            <span>Caracteres más repetidos ( 10 )</span>
+                        </div>
+                        <div class="img">
+                            <img class="cerrado" loading="lazy" src="/recursos/flecha_pico.svg"
+                                alt="Mostrar esconder contenido lista">
+                        </div>
+                    </div>
+                    <div class="contenido-lista-interior" id="text-counter-most-repeat-symbol">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
